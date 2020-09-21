@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import img from './assets/image/goodsimg.png'
+
 export default {
     name:'App'
 }
