@@ -1,16 +1,13 @@
 <template>
-    <div> 
-
-    <ul>
-        <li v-for="(val, key, index) in persons" :key="index"> {{ persons.index }} - {{ person.key }}- {{ persons.val }} </li>
-    </ul>
-
+    <div class="main"> 
+        this is Vue
     </div>
-
 </template>
  
 <script>
-import img from './assets/image/goodsimg.png'
+import img from './assets/image/goodsimg.png';
+import './assets/image/7.svg'
+import './assets/style/main.css'
 
 export default {
     name:'App',

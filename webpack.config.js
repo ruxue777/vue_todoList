@@ -19,7 +19,17 @@ module.exports = {
             loader:'vue-loader'
         },{
             test:/\.(jpg|png|jpeg|svg)/,
-            loader:'file-loader'
+            loader:'url-loader',
+            options:{
+                name:'[name].[ext]',
+                limit:2048
+            }
+        },{
+            test:/\.css$/,
+            use:[
+                'style-loader',
+                'css-loader'
+            ]
         }]
     },
     //插件
