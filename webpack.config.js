@@ -1,7 +1,10 @@
 const path = require('path');
 
 //导入vue-loader插件
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
+//导入html-webpack-plugin
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode:'development',
@@ -33,7 +36,7 @@ module.exports = {
         },{
             test:/\.styl(us)?$/,
             use:[
-                'style-loader',
+                'vue-style-loader',
                 'css-loader',
                 'stylus-loader'
             ]
@@ -41,7 +44,10 @@ module.exports = {
     },
     //插件
     plugins:[
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            template:'./index.html'
+        })
     ],
     resolve:{
         alias:{

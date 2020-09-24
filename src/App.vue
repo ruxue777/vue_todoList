@@ -5,9 +5,9 @@
 </template>
  
 <script>
-// import img from './assets/image/goodsimg.png';
-// import './assets/image/7.svg'
-// import './assets/style/main.css'
+import img from './assets/image/goodsimg.png';
+import './assets/image/7.svg'
+import './assets/style/main.css'
 import './assets/style/global.styl';
 
 export default {
@@ -25,6 +25,7 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+h1
+  color: red
 </style>
