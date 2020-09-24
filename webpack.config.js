@@ -30,6 +30,13 @@ module.exports = {
                 'style-loader',
                 'css-loader'
             ]
+        },{
+            test:/\.styl(us)?$/,
+            use:[
+                'style-loader',
+                'css-loader',
+                'stylus-loader'
+            ]
         }]
     },
     //插件
