@@ -1,6 +1,6 @@
 <template>
     <div class="main"> 
-        this is Vue
+        <h1>this is App</h1>
     </div>
 </template>
  
@@ -26,6 +26,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-h1
-  color: red
+
 </style>

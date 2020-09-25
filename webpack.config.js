@@ -6,10 +6,19 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 //导入html-webpack-plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+//导入clean-webpack-plugin,CleanWebpackPlugin是对象直接解构
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+
 module.exports = {
     mode:'development',
     //打包入口文件
     entry:'./src/main.js',
+    devServer:{
+        //服务器目录
+        contentBase:'./dist',
+        //自动打开浏览器
+        open:true
+    },
     //打包出口
     output:{
         filename:'bundle.js',
@@ -47,7 +56,8 @@ module.exports = {
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             template:'./index.html'
-        })
+        }),
+        new CleanWebpackPlugin()
     ],
     resolve:{
         alias:{
